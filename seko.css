@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+.nav a{
+position: relative;
+font-weight: 600;
+text-decoration: none;
+color: transparent;
+-webkit-text-stroke: 1px gold;
+overflow: hidden;
+
+}
+.nav a::before{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width .35s ease;
+}
+.nav a:hover::before{
+width: 100%;
+}
+.img1{
+    width: 50px;
+}
+.pad{
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+ a{
+    text-decoration: none ;
+    color: inherit;
+}
+.navigation{
+    display: flex; 
+    gap: 40px;
+list-style-type: none;
+}
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:midnightblue;
+    padding: 30px 25px;
+    color: gold;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.img2{
+width: 100% ;
+  height: auto;
+    bottom: 0;
+    left: 0;
+    display: block;
+    opacity: 0.8;
+    object-fit: cover;
+    min-height: 260px;
+}
+.card{
+   position: relative;
+    width: 100%;
+    color: gold;
+   overflow: hidden;
+}
+.position {
+  position: absolute;
+  top: 160px;
+  left: 40px;
+  right: 40px;
+  color: #0b1e3a; 
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 28px;
+  max-width: 720px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+ .position h1 { 
+  margin: 0 0 12px;
+  font-size: clamp(22px, 4vw, 34px);
+  line-height: 1.15;
+  color: #0b1e3a;
+ } 
+
+  .position1 {
+  position: absolute;
+  bottom: 150px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  color: #0b1e3a;
+}
+.position1 > span {
+  font-weight: 600;
+  font-size: clamp(14px, 1.8vw, 16px);
+  background: #0b1e3a;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.protection {
+  padding: 14px 20px;
+  border: 2px solid #0b1e3a;
+  border-radius: 50px;
+  font-size: 28px;
+  color: #0b1e3a;
+  min-width: 110px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(11,30,58,.15);
+}
+.protection{
+    padding: 50px; 
+  border: 2px solid midnightblue;
+  font-size:40px  ;
+  border-radius: 50%;
+  color: midnightblue;
+  margin: 15px;
+}
+ .card span{
+    font-size: 30px;
+    background-color:midnightblue;
+    border-radius: 20px;
+    padding: 7px;
+    margin: 12px;
+}
+.paragraphe {
+  margin: 6px 0;
+  font-size: clamp(14px, 1.8vw, 18px);
+  color: #1e2a4b;
+}
+
+
+#bnt {
+  position: relative; 
+  display: inline-block;
+  margin: 32px auto;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 3px solid #0b1e3a;
+  color: #0b1e3a;
+  background: #fffaf0; 
+  font-size: clamp(14px, 2vw, 18px);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+#bnt:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(11,30,58,.25);
+}
+#bnt:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+@media (max-width: 900px) {
+  .position {
+    left: 16px;
+    right: 16px;
+    padding: 22px;
+  }}
+  .position1 {
+    bottom: 14px;
+    right: 14px;
+  }
+ 
+.Appropos{
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+    columns: 2;
+    padding: 25px;
+    width: 100%;
+   
+}
+
+.img3{
+    width: 250px;
+     border: 2px solid black;
+   border-radius: 30px;
+}
+.img5{
+width: 250px;
+   border-radius: 15px;
+    border: 2px solid black;
+}
+.img4 , .img6 , .img7 , .img8{
+    width: 250px;
+    
+   border-radius: 15px;
+    border: 2px solid black;
+}
+.service{
+    display: flex;
+    align-items: center;
+   text-align: center;
+   padding: 30px;
+   border-radius: 15px;
+
+}
+
+
+/* Conteneur principal des services (slider) */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* hauteur adaptée à ton contenu; ajuste si nécessaire */
+  height: auto;
+  display: block;
+}
+
+/* Liste des slides - on les aligne horizontalement */
+.service.slides {
+  display: flex;
+  gap: 24px; /* espace entre les slides, ajuste au besoin */
+  transition: transform 0.6s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+  /* Pour un défilement horizontal fluide lors du déplacement via JS ou contrôles */
+  align-items: stretch;
+  /* Préserve le comportement sur les petits écrans */
+  touch-action: pan-y; /* permet le défilement vertical si nécessaire */
+}
+
+/* Chaque slide */
+.slide {
+  flex: 0 0 300px; /* largeur fixe par slide; ajuste selon ton design */
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  text-align: left;
+  background: midnightblue;
+  border-radius: 8px;
+  /* petit ombrage pour distinguer */
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* Titre et descriptions éventuellement */
+.slide p {
+  margin: 6px 0;
+  color: white;
+  line-height: 1.4;
+}
+
+/* Images spécifiques (pour éviter décalages visuels si tes classes varient) */
+.img5, .img3, .img4, .img6, .img7, .img8 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Contrôles de navigation (radio liés) - on les garde fonctionnels */
+.controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+.controls label {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.controls label:hover {
+  background: midnightblue;
+}
+input[name="slide"] {
+  display: none;
+}
+
+/* Positionnement du slide actif selon l'index du control (s1 -> 0, s2 -> 1, etc.) */
+/* On s'appuie sur le fait que les radios s1..s4 correspondent à des transformX */
+#s1:checked ~ .service.slides {
+  transform: translateX(0);
+}
+#s2:checked ~ .service.slides {
+  transform: translateX(-320px); /* égal à la largeur du slide + gap */
+}
+#s3:checked ~ .service.slides {
+  transform: translateX(-640px);
+}
+#s4:checked ~ .service.slides {
+  transform: translateX(-960px);
+}
+
+/* Adaptation responsive: on passe à des slides plus petites sur mobile */
+@media (max-width: 1000px) {
+  .slide {
+    flex: 0 0 260px;
+  }
+  #s2:checked ~ .service.slides { transform: translateX(-260px); }
+  #s3:checked ~ .service.slides { transform: translateX(-520px); }
+  #s4:checked ~ .service.slides { transform: translateX(-780px); }
+}
+@media (max-width: 700px) {
+  .slide { flex: 0 0 90%; } /* un seul slide visible à la fois sur petit écran */
+  .service.slides { gap: 12px; }
+  #s2:checked ~ .service.slides { transform: translateX(-90%); }
+  #s3:checked ~ .service.slides { transform: translateX(-180%); }
+  #s4:checked ~ .service.slides { transform: translateX(-270%); }
+}
+
+
+
+
+
+/* Prépare les images des slides à être interactives */
+.service.slides .slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-origin: center;
+  will-change: transform;
+  
+  backface-visibility: hidden;
+}
+
+
+.service.slides .slide:hover img {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
+}
+
+
+.service.slides .slide img.active {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.06);
+  box-shadow: 0 14px 28px rgba(0,0,0,.25);
+  outline: 2px solid #1a2a6c; 
+  outline-offset: -6px;
+}
+
+.why-us {
+  padding: 40px 20px;
+  background: #f7f7f7;
+  color: #1a2a6c;
+}
+.why-us h2 {
+  text-align: center;
+  font-size: clamp(22px, 3vw, 32px);
+  margin-bottom: 20px;
+  color: #0b1e3a;
+}
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.why-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  font-size: clamp(14px, 1.8vw, 18px);
+}
+.why-list li strong {
+  font-weight: 700;
+}
+@media (max-width: 700px) {
+  .why-list li { font-size: 16px; }
+}
+
+.engagement-grid {  
+  display: grid;  
+  grid-template-columns: repeat(4, 1fr);  
+  gap: 20px;  
+  max-width: 1200px;  
+  margin: 0 auto; 
+ 
+}  
+.engagement-card {  
+  padding: 18px;  
+  border: 1px solid #e5e5e5;  
+  border-radius: 12px 
+ 
+}
+
+
+
+.engagement {  
+  padding: 40px 20px;  
+  background: #f9f9f9;  
+  color: #0b1e3a;  
+}  
+.engagement h2 {  
+  text-align: center;  
+  font-size: clamp(22px, 3vw, 32px);  
+  margin-bottom: 24px;  
+}   
+
+.service1{
+  color: #0b1e3a;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 25px;
+}
+img.logo {
+    width: 50px;
+    padding: 0;
+    ;
+    border-radius: 50%;
+
+}
+
+.log {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+form{
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.colum1{
+  display: flex;
+
+
+}
