@@ -401,7 +401,7 @@ main > section {
 }
 
 .slider {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -412,8 +412,8 @@ main > section {
 
 .service.slides {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
   padding: 0;
   transform: none !important;
 }
@@ -444,20 +444,25 @@ main > section {
 }
 
 .slide p {
-  padding: 0 20px;
+  padding: 0 22px;
 }
 
 .slide p:first-of-type {
-  margin-top: 20px;
+  min-height: 3.1rem;
+  margin-top: 22px;
   color: var(--color-primary);
   font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(1.05rem, 2vw, 1.25rem);
   font-weight: 800;
+  line-height: 1.25;
 }
 
 .slide p:last-of-type {
+  flex: 1;
+  margin-top: 8px;
   padding-bottom: 22px;
   color: #4b4f62;
+  line-height: 1.65;
 }
 
 /* ==========================================================================
@@ -667,6 +672,10 @@ textarea:focus {
 @media (max-width: 1024px) {
   .colum1 {
     grid-template-columns: 1fr;
+  }
+
+  .service.slides {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
