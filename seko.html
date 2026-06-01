@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEKO SECURITE PRIVEE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="seko.css">
 </head>
 
@@ -15,21 +18,26 @@
                 <img class="img1" src="./image/file_00000000818471f9bbb44fedceee97df.png" alt="logo seko">
                 <h3 > SEKO SECURITE PRIVEE</h3>
             </div>
+            <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav">
                 <ul class="navigation">
                     <li> <a href="#"data-text="Accueil">Accueil</a></li>
-                    <li> <a href="#" data-text="Appropos">A propos </a> </li>
-                    <li> <a href="#"data-text="Service">Service</a></li>
-                    <li><a href="#"data-text="Contacter">Contacter</a></li>
+                    <li> <a href="#Appropos" data-text="Appropos">A propos </a> </li>
+                    <li> <a href="#Service"data-text="Service">Service</a></li>
+                    <li><a href="#Contacter"data-text="Contacter">Contacter</a></li>
                 </ul>
             </nav>
 
         </section>
     </header>
     <main>
-         <div class="card">
+         <div class="card" style="background-image: url('./image/secure-guard.jpg');">
             <img class="img2" src="./image/secure-guard.jpg" alt="">
-            <div class="position">
+            <div class="position reveal">
                 <h1> Votre Sécurité, Notre Priorité </h1>
                 <p class="paragraphe"> La Sécurité Privée au Service de Votre Tranquillité</p>
                 <p class="paragraphe"> Experts en Sécurité Privée </p>
@@ -39,7 +47,7 @@
             </div>
         </div>
          <button id="bnt" onclick="window.location.href='#Appropos'"> Nous Contacter</button>
-        <div class="Appropos" id="Appropos">
+        <div class="Appropos reveal" id="Appropos">
             <h2> A Propos de Nous </h2>
             <p> <span> SEKO Sécurité Privée </span> est une entrprise spécialisée dans la protection des biens et des
                 personne.
@@ -55,7 +63,7 @@
             <div> Excellence : Nous mettons la satisfaction client au centre de nos priorités .</div>
 
         </div>
-            <div>
+            <div class="services-section reveal" id="Service">
             <h3 class="service1"> NOS SERVICES </h3>
             <div class="slider">
                 <input type="radio"  name="slide" id="s1" checked>
@@ -104,7 +112,7 @@
                 <label for="s4">4</label>
               </div>
              </div>
-             <section class="why-us" aria-label="Pourquoi nous choisir">
+             <section class="why-us reveal" aria-label="Pourquoi nous choisir">
   <h5>Pourquoi nous choisir</h5>
   <ul class="why-list">
     <li><strong>1. Un service de sécurité premium,</strong> assuré par des agents qualifiés et formés.</li>
@@ -116,7 +124,7 @@
    
   </ul>
 </section>
-<section class="engagement" aria-label="Nos engagements">
+<section class="engagement reveal" aria-label="Nos engagements">
   <h2>Nos engagements</h2>
   <div class="engagement-grid">
     <article class="engagement-card">
@@ -142,7 +150,7 @@
 </section>
 
 
-<section class="colum1">
+<section class="colum1 reveal" id="Contacter">
     <div class="colum">
         <div>Nous contacter </div>
      <div>   Nos équipe sont disponibles 24h/24 et 7j/7 , prêtes à intervenir et à vous apporter une solution adaptées vos besoins sécuritaires. </div>
