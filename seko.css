@@ -109,6 +109,17 @@ header {
   gap: 14px;
 }
 
+.brand-link {
+  border-radius: 12px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.brand-link:hover,
+.brand-link:focus-visible {
+  opacity: 0.86;
+  transform: translateY(-2px);
+}
+
 .img1 {
   width: clamp(50px, 6vw, 70px);
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.22));
